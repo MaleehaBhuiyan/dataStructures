@@ -1,0 +1,8 @@
+Remove Pseudocode 
+
+• If the index is less than zero or greater than the length, return undefined 
+• If the index is the same as length - 1, pop 
+• If index is equal to 0, use the shift method
+• Otherwise, using the get method, access the node at index - 1
+• Set the next property of the previous node to be the next of the next node 
+• Decrement the length 

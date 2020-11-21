@@ -1,0 +1,10 @@
+Insert Pseudocode
+
+• If the index is less than zero or greater than the length return false 
+• If the index is same as the length, push a new node at the end of the list 
+• If the index is 0, use the unshift method 
+• Otherwise, using the get method, access the node at the index -1, 
+• Set the next property of that node to be the new node 
+• Set the next property ont he new node to be the previous next 
+• Increment the length 
+• Return true 
