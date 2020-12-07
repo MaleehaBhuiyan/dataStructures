@@ -1,0 +1,49 @@
+QUEUES:
+
+• Define what a queue is:
+    - It is a data structure where you add data in and take data out, those are really the only 2 operations: addding and removing
+    - FIFO data structure 
+        - First in first out 
+    - Queues exist everywhere: think about waiting in line as a real life example 
+
+• Understand the use cases for a queue
+    - Background tasks: uploading or downloading something 
+    - Printing / Task processing 
+
+• Implement operations on a queue data structure 
+    - built with an array 
+    - built with a singly linked list:
+        
+        ENQUEUE PSEUDOCODE: (used to add a value to the end of a list)
+        • This function accepts some value 
+        • Create a new node using that value passed to the function 
+        • If there are no nodes in the queue, set this node to be the first and last property of the queue
+        • Otherwise, tset the next property ont he current last to be that node, and then set the last property pf the queue to be that node
+        • Increment the size 
+        • Return the size 
+        
+        
+        DEQUEUE PSEUDOCODE: (used to remove a value from the start of a list)
+        • If there is no first property, just return null
+        • Store the first property in a variable
+        • See if the first is the same as the last (check if there is only 1 node). If so, set the first and last to be null
+        • If there is more than 1 node, set the first property to be the nect property of first 
+        • Decrement the size by 1 
+        • Return the value of the node dequeued
+
+• BIG O NOTATION
+    INSERTION - O(1)
+    REMOVAL - O(1)
+    SEARCHING - O(1)
+    ACCESS - O(N)
+
+    • Insertion and removal are the only things that matter, they should be super fast and use constant time... with an array there was no constant time, however with linked lists there are.
+
+• RECAP:
+    - Queues are a FIFO data structure, all elements are first in and first out 
+    - Queues are useful for processing tasks and are foundational formore complex data structures
+    - Insertion and removal can be done in O(1)
+
+
+
+
