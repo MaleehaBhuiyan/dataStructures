@@ -1,0 +1,54 @@
+STACKS:
+
+• What is a stack?
+    -These are data collections
+    -An abstarct data structure 
+    * MAIN RULE * a LIFO data structure 
+        - the last element added to a stack, is going to be the first one removed 
+        - think about a stack of plates: as you pile the last plate on the top of the plate pile, the last plate that you put on top will be the first plate removed
+        - a series of nodes in a singly linked can show this example 
+        - the cal stack follows this principle 
+
+• Understand the use case of a stack
+    - Managing function invocations 
+    - Undo/Redo
+    - Routing (the gistory object) is treated like a stack 
+
+• Implement operations on a stack data structure 
+    - with an array 
+    - with a linked list:
+        
+        PUSHING PSEUDOCODE
+        • The function should accept a value 
+        • Create the new node with the value 
+        • If there are no nodes in the stack, set the first and last property to be the newly created node 
+        • If there is at least one node, create a variable that stores the current first peoperty on the stack 
+        • Reset the first property to be the newly created node 
+        • Set the next property on the node to be the previously created variable 
+        • Incremenet the size of the stack by 1 
+
+        POPPING PSEUDOCODE
+        • If there are no nodes in the stack, return null
+        • Create a temporary variable to store the first property on the stack
+        • If there is only one node, set the first and last propety to be null 
+        • If there is more than one node, set the first property to be the next property on the current first
+        • Decrement the size by 1 
+        • Return the value of the node removed
+
+• Big O Notation
+    
+    INSERTION - O(1)
+    REMOVAL - O(1)
+    SEARCHING - O(N)
+    ACCESS - O(N)
+
+    * In a stack, what really matters in insertion and removal. Pushing and popping should be constant time. Searching and access are not important at all. A stack prioritizes insertion and removal. 
+
+• RECAP
+    - Stacks are LIFO data structure where the last value in is always the first one out 
+    - Stacks are used to handle function invocations (the call stack), for operations like undo/redo, and for routing (remember pages you have visited and go backwards/forward) and much more!
+    - They are not a built in data structure in JavaScript, but are relatively simple to implement. 
+
+
+
+
