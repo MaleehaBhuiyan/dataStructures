@@ -1,0 +1,80 @@
+TREES 
+
+• Define what a tree is
+    - A data sturcture that consists of nodes in a parent/child relationship
+    - RULES: 
+        • a node can only point to a child
+        • we can't have a node pointing to a parent
+        • we can't have a node pointing to a sibling 
+        • every node has to be poiinting away from the root node 
+        • a tree must have one entry point 
+    - TERMINOLOGY:
+        • Root: the top node in a tree 
+        • Child: a node directly connected to another node when moving away from the Root 
+        • Parent the converse notion of a child 
+        • Siblings: a group of nodes with the same parent
+        • Leaf: a node with no children 
+        • Edge: the connection between one node and another 
+    - TREE APPLICATIONS: 
+        • HTML DOM 
+        • Network Routing 
+        • Abstract Sytax Trees 
+        • Artificial Intelligence 
+        • Folders are modeled in an operating system 
+        • JSON 
+
+• Compare and contrast trees and lists
+    - LISTS: LINEAR 
+    - TREES: NON-LINEAR --> they can branch, we can have more than one pathway with a tree 
+    - A singly linked lsit can be seen as a special case of a tree 
+
+• Explain the differences between trees, binary trees and binary search trees
+    - Trees
+        • Each node can have any number of child nodes 
+        • No real rules about how many nodes 
+    - Binary Search Trees: they excel at searching, we store sorted data in a particular way in a binary search tree which makes ot easier to retrieve 
+        • SPECIAL CONDITION: each node, can at most have 2 children (that's the binary part)
+        • if we take any node on the tree, all numbers that is less than this node is located ont he left of it, every number that is greater is located to the right 
+        • Why are binary trees used:
+            - It makes it fast to look things up (searching)
+            - It makes it fast for insertion 
+            - Used to store data that can be compared, sortable
+
+
+
+• Implement operations on binary search trees
+    - INSERTING A NODE PSEUDOCODE: 
+        • create a new node 
+        • starting at the root 
+            • check if there is a root, if not - the root noe becomes that new node!
+            • if there is a root, check if the value of the new node is greater than or less than the value of the root 
+        • if it is greater 
+            • check to see if there is a node to the right 
+                • if there is, moveto that node and repeat these steps
+                • if there is not, add that node as the right property 
+        • if it is less 
+            • check to see if there is a node to the left 
+                • if there is, move to that node and repeat these steps 
+                • if there is not, add that node as the left property 
+        • return the entire tree 
+    
+    -FINDING A NODE IN A BINARY TREE PSEUDOCODE: 
+        •Starting at the root 
+            • check if there is a root, if not - we're done searching 
+            • if there is a root, check if the value of the new node is the value we are looking for. If we found it, we're done!
+            • if not, check to see if the value is greater than or less than the value of the root 
+            • if it is greater 
+                • check to see if there is a node to the right 
+                    • if there is, move to that node and repeat these steps
+                    • if there is not, we're done searching 
+            • if it is less 
+                • check to see if there is a node to the left 
+                    • if there is, move to that node and repeat these steos
+                    • of not, we are done searching 
+        • return true if node is found, return false if it is not found 
+
+
+• BIG O OF BINARY SEARCH TREES 
+    - Insertion: O(log n)
+    - Searching: O(log n)
+    *** Not garunteed: this is for best case and average case... but for worsecase there is no garunteed depending how the list list looks (linked list)
