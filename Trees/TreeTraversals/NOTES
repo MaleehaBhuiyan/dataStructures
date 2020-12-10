@@ -1,8 +1,10 @@
-How Do we visist every node one time? 
+Question: How Do we visist every node one time? 
 
 2 Strategies:
     1) Breadth-first Search 
+        
         -starting from the beginning, then working across the tree
+        
         -BFS PSEUDOCODE:
             • Create a queue (this can be an array) and a variable to store the values of nodes visited 
             • Place the root node in the queue
@@ -13,8 +15,63 @@ How Do we visist every node one time?
             • Return the variable that stores all of our values 
 
             
-    2) Depth-first Search 
+    2) Depth-first Search (3 Types)
+       
         - going down the tree vertically, then coming back up 
-        • InOrder 
-        • PreOrder 
-        • PostOrder
+            
+            * InOrder: visit node, traverse the entire left, then traverse the entire right 
+            -INORDER PSEUDOCODE
+                • Create a variable to store the values of nodes visited 
+                • Store the root of the BST in a variable called current 
+                • Write a helper function which accepts a node 
+                    • If the node has a left property, call the helper function withthe left property on the node 
+                    • Push the value of the node to the variable that stores the values 
+                    • If the node has a right propety, call th helper function with the right property on the node
+                    • Invoke the helper function with the current variable 
+                • Return the array of values  
+            
+            * PreOrder: visit first, then look at left and then look at right 
+            - PREODER PSEUDOCODE 
+                • Create a variable to store the values of the nodes visited 
+                • Store the root of the BST in a variable called current 
+                • Write a helper function which accepts a node 
+                    • Push the value of the node to the variable that stores the values
+                    • If the node has a left property, call the helper function with the left property on the node 
+                    • If the node has a right property, call the helper function with the right property on the node 
+                • Invoke the helper function with the current variable 
+                • Return the array of values 
+
+            * PostOrder: visit a node after we look at the left and right (explore first!)
+            - POSTORDER PSEUDOCODE
+                • Create a variable to store the values of nodes visited 
+                • Store the root of the BST in a variable called current 
+                • Write a helper function which accepts a node 
+                    • If the node has a left property, call the helper function withthe left property on the node 
+                    • If the node has a right propety, call th helper function with the right property on the node
+                    • Push the value of the node to the variable that stores the values 
+                    • Invoke the helper function with the current variable 
+                • Return the array of values  
+
+
+BFS vs DFS: which is better?
+
+    • In general BFS vs DFS 
+        - Depends on the tree ... time complexity is the same but space complexity is different 
+        - If a tree is wider, DFS will take less space in memory because BFS has to keep values in a qeueu 
+        - DFS is better when there are more nodes to keep track of (like a tree with 100 levels)
+        - BFS is better where there are less nodes to keep track of (like a long one sided tree)
+
+    • Variations of DFS 
+        - InOrder:
+            • Used commonly with BST's
+            • If you have a binary search tree, in order will give you the set of nodes in order from least to greatest 
+        - PreOrder:
+            • Can be useful if you wanna duplicate a tree, flatten it out and store it in a file 
+
+
+RECAP
+
+    • Trees are non-linear data structures that contain a root and child nodes 
+    • Binary Trees are special case. They can have values of any type but at most two children for each parent 
+    • Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than it's valye and every node to the right of is greater 
+    • We can search through trees using BFS and DFS 
