@@ -88,4 +88,5 @@ Binary Heaps
 • RECAP
     - Binary heaps are very useful data structuresfor sorting, and impelmenting other data structues like priority queues 
     - Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps with parent bring either smaller or larger than their children
+    - With just a little bit of math, we can represent heaps using arrays
     - 
